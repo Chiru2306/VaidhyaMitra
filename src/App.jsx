@@ -130,7 +130,7 @@ function App() {
         <ul>
           {selectedElements.map((selectedElement, index) => (
             <li key={index}>
-              {selectedElement.element} - {selectedElement.checkbox0 ? 'ప' : ' '} {selectedElement.checkbox1 ? 'ఉ' : ' '} {selectedElement.checkbox2 ? 'మ' : ' '} {selectedElement.checkbox3 ? 'రా' : ' '}  {inputValues[selectedElement.element] && `|  ${inputValues[selectedElement.element]}`} {'రోజులు'}
+              {selectedElement.element} - {selectedElement.checkbox0 ? 'ప' : ' '} {selectedElement.checkbox1 ? 'ఉ' : ' '} {selectedElement.checkbox2 ? 'మ' : ' '} {selectedElement.checkbox3 ? 'రా' : ' '}  {inputValues[selectedElement.element] && `|  ${inputValues[selectedElement.element]} రోజులు`}
             </li>
           ))}
         </ul>
