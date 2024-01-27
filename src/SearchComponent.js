@@ -100,7 +100,7 @@ const SearchComponent = ({ elements, selectedElements, handleCheckboxChange, inp
                             {selectedElement.checkbox1 ? 'M' : ' '}
                             {selectedElement.checkbox2 ? 'A' : ' '}
                             {selectedElement.checkbox3 ? 'N' : ' '}
-                            {inputValues[selectedElement.element] && `${inputValues[selectedElement.element]}`} {/* Display the input value */}
+                            {inputValues[selectedElement.element] && ` - ${inputValues[selectedElement.element]} days`} {/* Display the input value */}
                         </li>
                     ))}
                 </ul>
