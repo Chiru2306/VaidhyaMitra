@@ -196,11 +196,11 @@ function App() {
         <hr />
         <h4>Diagnosis: {instructions}</h4>
         <h4>Medicines:</h4>
-        <p>ప-పరిగడుపున | ఉ-ఉదయం | మ-మధ్యాహ్నం | రా-రాత్రి</p>
+        <b><p>ప-పరిగడుపున | ఉ-ఉదయం | మ-మధ్యాహ్నం | రా-రాత్రి</p></b>
         <ul>
           {selectedElements.map((selectedElement, index) => (
             <li key={index}>
-              {selectedElement.element} - <br /> {selectedElement.checkbox0 ? 'ప' : ' '} {selectedElement.checkbox1 ? 'ఉ' : ' '} {selectedElement.checkbox2 ? 'మ' : ' '} {selectedElement.checkbox3 ? 'రా' : ' '}  {inputValues[selectedElement.element] && `|  ${inputValues[selectedElement.element]} రోజులు`}<br/> <br/>
+              <b>{selectedElement.element} - <br /> {selectedElement.checkbox0 ? 'ప' : ' '} {selectedElement.checkbox1 ? 'ఉ' : ' '} {selectedElement.checkbox2 ? 'మ' : ' '} {selectedElement.checkbox3 ? 'రా' : ' '}  {inputValues[selectedElement.element] && `|  ${inputValues[selectedElement.element]} రోజులు`}</b><br/> <br/>
             </li>
           ))}
         </ul>
