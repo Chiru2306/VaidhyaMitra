@@ -119,25 +119,29 @@ function App() {
     const doc = iframe.contentWindow.document;
     doc.open();
     doc.write(`
-      <html>
-        <head>
-          <title>Print</title>
-          <link rel="stylesheet" href="print.css">
-        </head>
-        <body>
-          ${content}
-          <script type="text/javascript">
-            window.onload = function() {
-              window.print(); // Print the window
-              window.onafterprint = function() {
-                document.body.removeChild(iframe); // Remove the iframe after printing
-              };
+    <html>
+      <head>
+        <title>Print</title>
+        <style>
+          body {
+            font-size: 1.5em;
+          }
+        </style>
+      </head>
+      <body>
+        ${content}
+        <script type="text/javascript">
+          window.onload = function() {
+            window.print();
+            window.onafterprint = function() {
+              document.body.removeChild(iframe);
             };
-          </script>
-        </body>
-      </html>
-    `);
-    doc.close();
+          };
+        </script>
+      </body>
+    </html>
+  `);
+  doc.close();
   };
   
 
